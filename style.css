@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --slider-height: 5.4px;
+  --thumb-height: 16px;
+  --timestamp-size: 10px;
+  --controls-height: 50px;
+}
+
+body{
+  margin: auto;
+  width: 70%;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+}
+
+.armas-videoplayer{
+  position: relative;
+  width: 100%;
+}
+
+.armas-videoplayer__video{
+  display: block;
+  background-color: black;
+  width: 100%;
+}
+
+.armas-videoplayer__controls{
+  position: absolute;
+  width: 100%;
+  height: var(--controls-height);
+  bottom: 0;
+}
+
+.video-controls{
+  display: flex;
+  align-items: center;
+  background-color: #1115;
+  padding: 10px;
+  color: white;
+}
+
+.video-controls__main-btn{
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-controls__main-btn_play{
+  
+}
+
+.video-controls__main-btn_play .video-controls__pause{
+  display: none;
+}
+
+.video-controls__main-btn_pause{
+}
+
+.video-controls__main-btn_pause .video-controls__play{
+  display: none;
+}
+
+.video-controls__time{
+  margin-right: 10px;
+}
+
+.video-controls__progress-container{
+  position: relative;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.video-controls__timestamps{
+  position: absolute;
+  bottom: calc(var(--controls-height) / 2 - 1.5 * var(--slider-height));
+  height: var(--slider-height);
+  list-style-type: none;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.timestamp{
+  width: var(--timestamp-size);
+  height: var(--timestamp-size);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
+
+.timestamp::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc( -10px -  var(--slider-height));
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc( 10px + var(--slider-height));
+  width: 1px;
+  background-color: yellow;
+  pointer-events: none;
+}
+
+.timestamp:not(.timestamp_selected):hover{
+  background-color: lightcoral;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.timestamp_selected {
+  position: relative;
+  transition: all 0.5s;
+  top: 0px;
+  height: calc( var(--controls-height) / 2);
+  width: calc( var(--controls-height) * 1.35 - var(--slider-height) * 1.35);
+  border-radius: 0;
+  background-color: #ddf;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}

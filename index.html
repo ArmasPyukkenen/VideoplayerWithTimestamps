@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom video player</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./slider.css">
+  <link rel="stylesheet" href="./timestamp-editor.css">
+  <script src="https://kit.fontawesome.com/533f790df8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="armas-videoplayer">
+      <video class="armas-videoplayer__video" src="homework.mp4"></video>
+      <div class="armas-videoplayer__controls video-controls">
+        <div class="video-controls__main-btn video-controls__main-btn_play">
+          <i class="video-controls__play">play</i>
+          <i class="video-controls__pause">pause</i>
+          <!-- <i class="fas fa-play video-controls__play"></i>
+          <i class="fas fa-pause video-controls__pause"></i> -->
+        </div>
+        <input type="range" name="" id="" class="video-controls__progress" step="any">
+        <div class="video-controls__time">
+          <span class="video-controls__current">0:00</span> / <span class="video-controls__duration">1:20:15</span>
+        </div>
+        <div class="video-controls__add-timestamp btn" title="add timestamp here">
+          <i class="fas fa-clock"></i>
+        </div>
+      </div>
+      <ul class="video-controls__timestamps">
+        <li class="timestamp"></li>
+      </ul>
+      <div class="timestamp-editor">
+        <button class="timestamp-editor__close btn_transparent"><i class="fas fa-times"></i></button>
+        <textarea class="timestamp-editor__text"></textarea>
+        <button class="timestamp-editor__save btn">save</button>
+        <button class="timestamp-editor__rewind btn">rewind</button>
+        <button class="timestamp-editor__delete btn">delete</button>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 10px; border: 1px solid blue; padding: 10px;">
+    <h1>Lorem, ipsum dolor.</h1>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam praesentium doloremque numquam dolorum explicabo excepturi, ex voluptatibus dolores blanditiis sequi debitis voluptate. Molestias dolorum repellendus itaque et similique deserunt quidem praesentium quas numquam quae maiores quo architecto ipsa, nostrum ipsam, excepturi porro incidunt sed autem qui doloremque! Porro maiores perferendis, nisi nemo beatae, aspernatur distinctio error itaque asperiores pariatur nobis ducimus. Culpa ipsam cum numquam, mollitia porro ea dolor architecto amet dolores explicabo cupiditate optio ipsa doloremque accusantium laboriosam suscipit voluptatum asperiores? Eaque repudiandae beatae ut? Provident quia est sunt obcaecati facere natus tempora tenetur repudiandae a! Vitae, perferendis enim corporis impedit voluptas tenetur, distinctio aliquam aut, nulla consequuntur dolor et. Saepe enim aut ut laudantium soluta sit vel, illo necessitatibus doloremque neque mollitia, expedita aliquam deleniti. Accusamus ducimus inventore enim neque? Id quas quia dolorum, nostrum incidunt consequuntur dignissimos atque maiores voluptate autem error eligendi doloremque totam unde at nihil eum deleniti exercitationem est dolorem amet illum aut pariatur. Ratione quia necessitatibus rem dolore? At tempora dolorum blanditiis voluptate ex, quae, quidem, dolor ipsum molestias hic debitis! Fugit quasi voluptatibus minus hic est nisi ipsa possimus. Quia reiciendis mollitia voluptatum, perspiciatis commodi reprehenderit repellendus quibusdam optio nobis doloremque cum, nemo unde eum quos, quas delectus error. Repellat sunt veritatis aliquid vero nihil nisi, ducimus odio suscipit. Non dolore blanditiis obcaecati numquam est, dolor temporibus fugit impedit, eligendi natus nesciunt nemo maxime deleniti sapiente sunt nam magnam veritatis cupiditate facere, suscipit minus laudantium exercitationem iure quam! Sit sequi non quia voluptates assumenda, praesentium itaque ex accusamus recusandae blanditiis distinctio, facere doloribus neque quod ratione commodi maxime. Ipsa quaerat ad sit illo, temporibus quas neque labore nemo mollitia itaque, enim quo eaque commodi culpa! Nihil pariatur labore aliquid, similique deserunt, animi accusamus quos impedit ut neque aut? Consectetur praesentium, ratione nulla atque quas labore eaque commodi consequuntur, odit reprehenderit temporibus magni consequatur excepturi ex? Aut fugit eveniet adipisci ipsa ex, necessitatibus quod harum nam incidunt recusandae. Doloremque sequi beatae eum mollitia nostrum rerum fugiat saepe quisquam dolorum, amet hic nam officiis doloribus temporibus natus, culpa voluptatum cupiditate incidunt velit error? Iure adipisci repellendus velit officiis ratione blanditiis laudantium veritatis, pariatur voluptatibus quidem voluptatum vel modi itaque doloribus aspernatur commodi non amet nemo laborum. Commodi saepe fuga natus magni quisquam explicabo adipisci quod porro, dolores impedit ex! Tenetur quod dolorum dignissimos sint consequatur repudiandae nisi soluta delectus doloremque fugiat eligendi officia, nihil dolor earum qui ut quidem aspernatur quae aliquid rerum repellendus magnam inventore. Eligendi totam autem repudiandae? Placeat, quae iste? Expedita quaerat delectus minima totam nihil officiis dolor quasi alias maiores dolores! Laudantium sit aliquam asperiores praesentium blanditiis velit esse possimus in excepturi dignissimos dolor beatae pariatur nobis, eaque soluta, veniam tempora laboriosam? Voluptates assumenda ipsa natus dolore dolores possimus eaque quia, eos fugiat quas nihil, aliquam pariatur cum animi dolorum quam maxime eius reiciendis voluptatibus mollitia excepturi dignissimos saepe adipisci magnam. Qui suscipit, ratione maiores voluptatibus facere quia ipsum molestiae placeat quae voluptas mollitia porro corrupti sapiente, repellendus officia delectus.
+  </div>
+  <script src="./TimestampManager.js"></script>
+  <script src="./VideoPlayer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', e => {
+      const player = new VideoPlayer();
+    }) 
+    /* document.querySelector('.video-controls__timestamps').addEventListener('click', (e) => {
+      player.progressBar.click();
+      console.log('clicked')
+    }) */
+  </script>
+</body>
+</html>
