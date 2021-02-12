@@ -1,0 +1,78 @@
+.timestamp-editor{
+  position: absolute;
+  width: fit-content;
+  bottom: 0;
+  left: 10px;
+  transform: translateY(100%);
+  background-color: #ddf;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.timestamp-editor__text{
+  position: relative;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.btn_transparent{
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn_transparent:hover{
+  box-shadow: 1px -1px 2px #bbbbee;
+}
+
+.btn_transparent:focus{
+  border: none;
+  outline: none;
+}
+
+.horizontal-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timestamp-editor__time{
+
+}
+
+.timestamp-editor__close{
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
+
+.timestamp-editor__text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  display: block;
+  min-width: 100px;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+
+.timestamp-editor__save{
+  margin-right: 10px;
+}
+
+.timestamp-editor__rewind{
+  float: right;
+}
+
+.timestamp-editor__delete{
+  float: right;
+  margin-right: 10px;
+}
